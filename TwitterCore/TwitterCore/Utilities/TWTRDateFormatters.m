@@ -59,6 +59,7 @@ static NSLocale *internalLocale;
         if (formatter == nil) {
             formatter = [[NSDateFormatter alloc] init];
             formatter.dateFormat = @"EEE',' dd' 'MMM' 'yyyy HH':'mm':'ss zzz";
+            formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier: @"en_US_POSIX"];
             self.cache[key] = formatter;
         }
     }
